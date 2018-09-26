@@ -1,0 +1,244 @@
+
+/* 在主页的样式文本引用公共样式文本*/
+
+@import './base.less';
+
+
+body{
+	/* 给body设置最大宽度让页面在PC端不会太大 */
+	max-width: 7.5rem;
+	/* 让body居中设置居中 块级居中使用margin:0 auto */
+	margin: 0px auto;
+}
+
+/*头部区域*/
+#header{
+max-width: 7.5rem;  
+  display: flex;
+  padding: 0.07rem 0.1rem;
+  background-color: rgba(222, 24, 27, 0);
+  position: fixed;
+  top:0px;
+   z-index: 999;
+   width: 100%;
+ .icon-logo{
+    display: block;
+    width: 0.58rem;
+    height: 0.23rem;
+    background-position: 0px -1.1rem;
+   margin-top: 0.03rem;
+
+ } 
+ form{
+     flex: 1;
+     margin-left: 0.1rem;
+     position: relative;
+    .icon-search{
+        position: absolute;
+       left: 0.05rem;
+        top: 0.06rem;
+        width: 0.2rem;
+        height: 0.2rem;
+        background-position: -0.6rem -1.1rem;
+       }
+     >input{
+         width: 100%;
+         height: 0.3rem;
+         border-radius: 0.15rem;
+         padding-left: 0.3rem;
+     }
+ }
+.login{
+     width: 0.6rem;
+     text-align: center;
+     line-height: 0.3rem;
+     color: white;
+
+ }
+}
+
+/*轮播图样式*/
+#slide{
+ 
+   img{
+    
+    width: 100%;
+   }
+
+   .swiper-pagination-bullet{
+       border: 0.01rem solid white;
+       background-color:transparent;
+       opacity: 1;
+   }
+
+   .swiper-pagination-bullet-active{
+    background-color: #fff;
+}
+}
+
+/*导航栏样式*/
+
+#nav{
+  padding-top: 0.2rem;
+    >ul{
+        display: flex;
+        flex-wrap: wrap;
+        >li{
+            text-align: center;
+            width: 25%;
+          
+            >a{
+                >img{
+                    width: 0.4rem;
+                    height: 0.4rem;
+                  
+                }
+                >p{
+                    line-height: 0.3rem;
+                    font-size: 0.14rem;
+                }
+            }
+        }
+    }
+}
+
+/*主体商品样式*/
+#products{
+    background-color: #f5f5f5;
+    padding: 0.1rem;
+    padding-bottom: 0.6rem;
+ #seckill{
+   padding: 0.05rem;  
+   background-color: white;
+    box-shadow: 0px 0px 0.01rem @border-color; 
+   .title{
+      display: flex;
+      position: relative; 
+    .naozhong{
+      width: 0.2rem;
+      height: 0.25rem;
+    }
+    .name{
+     margin: 0px 0.1rem ;
+     color: @main-color;
+     font-size: 0.14rem;
+     line-height: 0.25rem;
+    }
+    .down-time{
+        line-height: 0.25rem;
+      >span{
+       display: inline-block;    
+       width: 0.15rem;
+       height: 0.15rem;
+       background-color: black;
+       color: white;
+       line-height: 0.15rem;
+       text-align: center;
+       &:nth-child(3n){
+         background-color: white;
+         color: black;
+       }
+      }
+    }
+    >a{
+        position: absolute;
+        right: 0.05rem;
+        font-size: 0.14rem;
+        line-height: 0.25rem;
+    }
+   }
+   .content{
+     margin-top: 0.1rem;  
+     >ul{
+         display: flex;
+         >li{
+             width: 33.33%;
+             >a{
+                 >img{
+                  width: 1.1rem;
+                  height: 1.1rem;
+                 }
+             }
+             >p{
+             text-align: center;    
+             font-size: 0.12rem; 
+             &:nth-of-type(1){
+                 color: @main-color;
+             } 
+             &:nth-of-type(2){
+                 color:@border-color;
+             }
+             }
+         }
+     }
+   }  
+ }  
+ 
+ #jd-market{
+    margin-top: 0.1rem;
+    background-color: white;
+    box-shadow: 0px 0px 0.01rem #cccccc;
+    position: relative;
+
+   .title{
+       border-bottom: 0.01rem solid @border-color;
+      >h4{
+        padding: 0.05rem 0.3rem;
+      }
+      &:before{
+          content: "";
+          width: 0.05rem;
+          height: 0.2rem;
+          background-color: @main-color;
+          position: absolute;
+          top:0.06rem;
+          left: 0.15rem;
+      }
+   } 
+   .content{
+    display: flex;
+      .left{ 
+       width: 50%;
+       >a{
+           >img{
+               width: 1.77rem;
+               height: 1.91rem;
+           }
+       }
+      } 
+     .right{  
+      width: 50%;
+      >a{
+          display: block;
+          height: 0.98rem;
+          >img{
+              width: 1.77rem;
+              height: 0.97rem;
+          }
+      }
+     } 
+   } 
+ }
+}
+
+#footer{
+    position: fixed;
+	width: 100%;
+	background: #fff;
+	bottom: 0px;
+	z-index: 999;
+	max-width: 7.5rem;
+    >ul{
+        display: flex;
+       >li{
+          text-align: center;
+           width: 25%;
+           >a{
+               >img{
+                width: 0.65rem;
+                height: 0.5rem;
+               }
+           }
+       } 
+    }
+}
